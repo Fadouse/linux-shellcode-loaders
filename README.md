@@ -2,6 +2,10 @@
 
 Educational x86_64 Linux PoCs that compare multiple local shellcode execution and loading techniques. Every demo is self-contained and prints a benign `helloworld from ...` message to the console/stdout.
 
+## Notice
+
+> For educational exchange and authorized security research only. Use these PoCs only in local labs, CTFs, coursework, or systems you own or are explicitly authorized to test. The examples are intentionally benign and are provided to study Linux userland execution mechanisms, not for unauthorized access or misuse.
+
 This repository is organized as a learning map: each numbered directory represents a different execution/loading concept.
 
 ## Requirements
@@ -183,3 +187,7 @@ make test      # build and run all demos
 ## Learning notes
 
 All raw shellcode-style payloads are intentionally minimal. They perform a Linux x86_64 `write(1, message, length)` syscall and then return or exit, depending on the loader style. The goal is to compare execution mechanisms, not payload behavior.
+
+## License
+
+This project is released under the MIT License. See [`LICENSE`](LICENSE).
